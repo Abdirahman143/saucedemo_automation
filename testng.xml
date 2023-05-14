@@ -1,0 +1,44 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Test Suite">
+    <test name="Login Test">
+        <classes>
+            <class name="com.pages.Login_TC" />
+        </classes>
+
+    </test>
+
+    <test name="Home Test">
+        <classes>
+            <class name="com.pages.Home_TC">
+                <methods>
+                    <exclude name="menuButton"></exclude>
+                </methods>
+            </class>
+          </classes>
+    </test>
+        <test name="Carte Test">
+            <classes>
+                <class name="com.pages.Cart_TC" />
+            </classes>
+        </test>
+        <test name="Checkout Test">
+            <classes>
+                <class name="com.pages.Checkout_TC" />
+            </classes>
+        </test>
+    <test name="Information Test">
+        <classes>
+            <class name="com.pages.Information_TC" />
+        </classes>
+    </test>
+    <test name="Overview Test">
+        <classes>
+            <class name="com.pages.Overview_TC" />
+        </classes>
+    </test>
+<!--    <test name="Logout Test">-->
+<!--        <classes>-->
+<!--            <class name="com.pages.Logout_TC" />-->
+<!--        </classes>-->
+<!--    </test>-->
+</suite>

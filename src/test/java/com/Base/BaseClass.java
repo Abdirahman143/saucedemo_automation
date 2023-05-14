@@ -1,6 +1,7 @@
 package com.Base;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.jupiter.api.AfterAll;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -59,5 +60,11 @@ public class BaseClass {
         driver.get(prop.getProperty("url"));
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+    }
+
+
+    @AfterAll
+    public static void closeBrowser(){
+        driver.close();
     }
 }
