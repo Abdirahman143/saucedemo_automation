@@ -36,9 +36,19 @@
             <class name="com.pages.Overview_TC" />
         </classes>
     </test>
-<!--    <test name="Logout Test">-->
-<!--        <classes>-->
-<!--            <class name="com.pages.Logout_TC" />-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name=" HomePage2 Test">
+    <classes>
+        <class name="com.pages.Home_TC">
+            <methods>
+                <include name="finishShopping"></include>
+                <include name="menuButton"></include>
+            </methods>
+        </class>
+    </classes>
+    </test>
+    <test name="Logout Test">
+        <classes>
+            <class name="com.pages.Logout_TC" />
+        </classes>
+    </test>
 </suite>
