@@ -28,8 +28,8 @@ private WebElement finishBtn;
         return total_price.getText();
     }
 
-    public HomePage finishShopping(){
+    public OrderCompletionPage finishShopping(){
         finishBtn.click();
-        return new HomePage(driver);
+        return new OrderCompletionPage(driver);
     }
 }

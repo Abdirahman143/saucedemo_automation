@@ -12,6 +12,7 @@
             <class name="com.pages.Home_TC">
                 <methods>
                     <exclude name="menuButton"></exclude>
+                    <exclude name="BackToHomeBtn"></exclude>
                 </methods>
             </class>
           </classes>
@@ -36,11 +37,16 @@
             <class name="com.pages.Overview_TC" />
         </classes>
     </test>
+    <test name="Order Completion Test">
+        <classes>
+            <class name="com.pages.OrderCompletion_TC" />
+        </classes>
+    </test>
     <test name=" HomePage2 Test">
     <classes>
         <class name="com.pages.Home_TC">
             <methods>
-                <include name="finishShopping"></include>
+                <include name="BackToHomeBtn"></include>
                 <include name="menuButton"></include>
             </methods>
         </class>

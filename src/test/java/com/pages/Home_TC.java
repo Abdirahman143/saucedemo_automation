@@ -3,6 +3,7 @@ package com.pages;
 import com.Base.BaseClass;
 import com.Pages.HomePage;
 import com.Pages.LoginPage;
+import com.Pages.OrderCompletionPage;
 import com.Pages.OverviewPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,13 +17,13 @@ public class Home_TC extends BaseClass {
 
     public LoginPage loginPage;
     public HomePage homePage;
-    OverviewPage overviewPage;
-
+  public OrderCompletionPage completionPage;
 
     @Test(priority = 2)
     public void LoginBtn(){
         loginPage = new LoginPage(driver);
         homePage = new HomePage(driver);
+
         homePage = loginPage.clickLoginBtn();
     }
 
@@ -53,10 +54,10 @@ public class Home_TC extends BaseClass {
     homePage.addToCartT_shirt();
     }
 
-    @Test(priority = 8)
-    public  void finishShopping(){
-        overviewPage = new OverviewPage(driver);
-        homePage = overviewPage.finishShopping();
-    }
+    @Test
+public void BackToHomeBtn(){
+        completionPage = new OrderCompletionPage(driver);
+        homePage = completionPage.clickBackToHomePageBtn();
+}
 
 }
